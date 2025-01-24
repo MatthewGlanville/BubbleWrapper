@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
-    public GameObject [,] BubbleMap = { //a map full of all the bubbles in the scene, you cam 
+    [SerializeField] private Sprite popped; 
+    public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < objects.Count; i++)
         {
-            BubbleMap[i/16,i%16] = objects[i];
+            bubbleMap[i/16,i%16] = objects[i];
             PoppableBubble bubble = objects[i].GetComponent<PoppableBubble>();
             if (bubble != null)
             {
@@ -35,11 +37,7 @@ public class GameManager : MonoBehaviour
         {
             int bubbleLength = bubble % 16;
             int bubbleHeight = bubble / 16;
-            PoppableBubble bubbleScript = BubbleMap[bubbleHeight,bubbleLength].GetComponent<PoppableBubble>();
-            if (bubbleScript != null)
-            {
-                bubbleScript.popBubble();
-            }
+            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = popped;
         }
 
     }
