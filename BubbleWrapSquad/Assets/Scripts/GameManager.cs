@@ -15,9 +15,11 @@ public class GameManager : MonoBehaviour
     private Vector2 cursorHotSpot;
     [SerializeField] private Sprite unpoppedBubble;
     [SerializeField] private Sprite poppedBubble;
+    [SerializeField] private GameObject poppingBubble;
     [SerializeField] private Sprite hoveredBubble;
     [SerializeField] private Sprite unpoppedNonBubble;
     [SerializeField] private Sprite poppedNonBubble;
+    [SerializeField] private GameObject poppingNonBubble;
     [SerializeField] private Sprite hoveredNonBubble;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private int mapLength;
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
     public List<List<GameObject>> bubbleMapDyn= new List<List<GameObject>>(); //not necessary just wanted to see if i could make it flexible cause i had nothing better to do
     [SerializeField] private AudioSource audio;
     [SerializeField] private List<AudioClip> bubbleSounds;
-
+    GameObject popClone;
     public List<GameObject> bubbles; //loads the
     // Start is called before the first frame update
     void Awake()
@@ -78,18 +80,49 @@ public class GameManager : MonoBehaviour
             {
                 if (bubbleScript.Poppable)
                 {
-                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedBubble;
+                    bubbleMapDyn[bubbleHeight][bubbleLength].SetActive(false);
+                    popClone = Instantiate(poppingBubble, bubbleMapDyn[bubbleHeight][bubbleLength].transform.position, Quaternion.identity);
+                    PopScript pop = popClone.GetComponent<PopScript>();
+                    if (pop != null)
+                    {
+                        pop.popStart(this, bubbleMapDyn[bubbleHeight][bubbleLength]);
+                    }
+
                 }
                 else
                 {
-                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedNonBubble;
+                    bubbleMapDyn[bubbleHeight][bubbleLength].SetActive(false);
+                    popClone = Instantiate(poppingNonBubble, bubbleMapDyn[bubbleHeight][bubbleLength].transform.position, Quaternion.identity);
+                    PopScript pop = popClone.GetComponent<PopScript>();
+                    if (pop != null)
+                    {
+                        pop.popStart(this, bubbleMapDyn[bubbleHeight][bubbleLength]);
+                    }
                 }
                 bubbleScript.Popped = true;
             }
+            
         }
         if (checkIfSolved())
         {
             SceneManager.LoadScene("MainMenu");//REPLACE THIS WITH WHATEVER MENU SCENE YOU MAKE.
+        }
+    }
+    public void getPopped(GameObject bubbleObj)
+    {
+        bubbleObj.SetActive(true);
+        bubbleObj.GetComponent<Image>().sprite = poppedBubble;
+        PoppableBubble bubbleScript = bubbleObj.GetComponent<PoppableBubble>();
+        if ((bubbleScript != null))
+        {
+            if (bubbleScript.Poppable)
+            {
+                bubbleObj.GetComponent<Image>().sprite = poppedBubble;
+            }
+            else
+            {
+                bubbleObj.GetComponent<Image>().sprite = poppedNonBubble;
+            }
         }
     }
     public void Reset()
