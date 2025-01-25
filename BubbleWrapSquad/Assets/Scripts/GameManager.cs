@@ -56,9 +56,14 @@ public class GameManager : MonoBehaviour
     {
         foreach (int bubble in bubblepops)
         {
+
             int bubbleLength = bubble % 16;
             int bubbleHeight = bubble / 16;
-            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hovered;
+            PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            if ((bubbleScript != null) && (!bubbleScript.Popped))
+            {
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hovered;
+            }
         }
 
     }
@@ -68,7 +73,11 @@ public class GameManager : MonoBehaviour
         {
             int bubbleLength = bubble % 16;
             int bubbleHeight = bubble / 16;
-            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = regular;
+            PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            if ((bubbleScript != null) && (!bubbleScript.Popped))
+            {
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = regular;
+            }
         }
 
     }
