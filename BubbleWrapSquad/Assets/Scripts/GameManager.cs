@@ -37,9 +37,25 @@ public class GameManager : MonoBehaviour
         {
             int bubbleLength = bubble % 16;
             int bubbleHeight = bubble / 16;
-            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = popped;
+            PoppableBubble bubbleScript= bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            if ((bubbleScript != null) && (!bubbleScript.Popped))
+            {
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = popped;
+                bubbleScript.Popped = true;
+            }
         }
 
+    }
+    bool checkIfSolved()
+    {
+        for (int i=0; i<objects.Count; i++)
+        {
+            PoppableBubble bubbleScript = objects[i].GetComponent<PoppableBubble>();
+            if (( bubbleScript != null ) && (!bubbleScript.Popped)){
+                return false;
+            }
+        }
+        return true;
     }
     // Update is called once per frame
     void Update()

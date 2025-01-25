@@ -6,7 +6,13 @@ public class PoppableBubble : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     [SerializeField] private List<int> bubblepops;
-    public int bubblePos; 
+    public int bubblePos;
+    private bool popped = false; 
+    public bool Popped
+    {
+        get { return popped; }
+        set { popped = value; }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +20,10 @@ public class PoppableBubble : MonoBehaviour
     }
     public void OnClick()
     {
-        gameManager.popBubbles(bubblepops);
-    }
-    public void popBubble()
-    {
-        Debug.Log(bubblepops[0]);
+        if (!Popped)
+        {
+            gameManager.popBubbles(bubblepops);
+        }
     }
     // Update is called once per frame
     void Update()

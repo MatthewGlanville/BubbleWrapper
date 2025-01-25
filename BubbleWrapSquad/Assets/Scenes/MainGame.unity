@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 00000000670000006500000045000000470000005800000054000000690000006300000036000000
   bubblePos: 0
 --- !u!114 &18421920
 MonoBehaviour:
@@ -764,7 +764,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 18421921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18421919}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &18421921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000004a0000004b000000390000003a000000290000002a0000001900000009000000
   bubblePos: 0
 --- !u!114 &84084568
 MonoBehaviour:
@@ -1210,7 +1222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 84084569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 84084567}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &84084569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 00000000390000004a0000006a0000007900000077000000660000004600000037000000
   bubblePos: 0
 --- !u!114 &126594163
 MonoBehaviour:
@@ -1618,7 +1642,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126594164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 126594162}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &126594164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,7 +2697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000001000000031000000330000001400000035000000160000003700000018000000390000001a0000003b0000001c0000003d0000001e0000003f000000
   bubblePos: 0
 --- !u!114 &268736184
 MonoBehaviour:
@@ -2706,7 +2742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 268736185}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268736183}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &268736185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,7 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000001e0000001c0000000d0000000c0000000e0000002d0000002c0000002e0000006d0000006e0000006c0000007d0000007e0000007c0000005d0000005c0000005e000000
   bubblePos: 0
 --- !u!114 &332768770
 MonoBehaviour:
@@ -3114,7 +3162,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 332768771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 332768769}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &332768771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,7 +3401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000038000000340000004400000024000000280000001700000015000000570000005500000048000000
   bubblePos: 0
 --- !u!114 &342492544
 MonoBehaviour:
@@ -3386,7 +3446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342492545}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 342492543}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342492545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3477,7 +3549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000004600000044000000
   bubblePos: 0
 --- !u!114 &351913501
 MonoBehaviour:
@@ -3522,7 +3594,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 351913502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 351913500}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &351913502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3749,7 +3833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 00000000770000007800000075000000740000006600000068000000640000000600000007000000080000000500000004000000160000001800000014000000
   bubblePos: 0
 --- !u!114 &379735309
 MonoBehaviour:
@@ -3794,7 +3878,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 379735310}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 379735308}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &379735310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,7 +4253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000000a0000001b0000000c0000002d0000003e0000004e0000003c000000
   bubblePos: 0
 --- !u!114 &421542547
 MonoBehaviour:
@@ -4202,7 +4298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 421542548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 421542546}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &421542548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4429,7 +4537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000063000000610000007200000052000000
   bubblePos: 0
 --- !u!114 &460429897
 MonoBehaviour:
@@ -4474,7 +4582,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460429898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 460429896}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460429898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5473,7 +5593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000003a0000004b0000005c0000006d0000007e0000001800000007000000
   bubblePos: 0
 --- !u!114 &591452500
 MonoBehaviour:
@@ -5518,7 +5638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 591452501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 591452499}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &591452501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5609,7 +5741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000007000000071000000500000005100000040000000300000003100000020000000100000001100000000000000
   bubblePos: 0
 --- !u!114 &609624247
 MonoBehaviour:
@@ -5654,7 +5786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 609624248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 609624246}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &609624248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6981,7 +7125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000033000000430000005300000063000000730000001300000003000000
   bubblePos: 0
 --- !u!114 &823110287
 MonoBehaviour:
@@ -7026,7 +7170,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 823110288}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823110286}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &823110288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7661,7 +7817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000006f0000004f0000004f000000
   bubblePos: 0
 --- !u!114 &939374542
 MonoBehaviour:
@@ -7706,7 +7862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 939374543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939374541}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &939374543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,7 +8781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000005a0000005b0000005c0000005d000000
   bubblePos: 0
 --- !u!114 &1051429205
 MonoBehaviour:
@@ -8658,7 +8826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051429206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051429204}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1051429206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10066,7 +10246,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -10406,7 +10586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000
   bubblePos: 0
 --- !u!114 &1244966870
 MonoBehaviour:
@@ -10451,7 +10631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1244966871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1244966869}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1244966871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10950,7 +11142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000007f0000002d000000
   bubblePos: 0
 --- !u!114 &1292766018
 MonoBehaviour:
@@ -10995,7 +11187,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1292766019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1292766017}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1292766019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11358,7 +11562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000000f0000001f000000
   bubblePos: 0
 --- !u!114 &1363474164
 MonoBehaviour:
@@ -11403,7 +11607,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1363474165}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1363474163}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1363474165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14078,7 +14294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000000000000
   bubblePos: 0
 --- !u!114 &1638814725
 MonoBehaviour:
@@ -15030,7 +15246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000007b000000790000006a000000
   bubblePos: 0
 --- !u!114 &1728068427
 MonoBehaviour:
@@ -15075,7 +15291,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1728068428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1728068426}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1728068428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17374,7 +17602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000000000000
   bubblePos: 0
 --- !u!114 &2064466999
 MonoBehaviour:
@@ -17510,7 +17738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 000000005b0000005d0000004c0000004d0000004b0000006c0000006d0000006b000000
   bubblePos: 0
 --- !u!114 &2077060569
 MonoBehaviour:
@@ -17555,7 +17783,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2077060570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2077060568}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2077060570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17646,7 +17886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 60125737}
-  bubblepops: 00000000
+  bubblepops: 0000000041000000430000003200000052000000
   bubblePos: 0
 --- !u!114 &2108122023
 MonoBehaviour:
@@ -17691,7 +17931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108122024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2108122022}
+        m_TargetAssemblyTypeName: PoppableBubble, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2108122024
 MonoBehaviour:
   m_ObjectHideFlags: 0
