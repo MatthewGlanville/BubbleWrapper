@@ -37,26 +37,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource audio;
     [SerializeField] private List<AudioClip> bubbleSounds;
 
-    //////////////////////////////////////////////////////////////////////////////////////////////Audio Stuff Testing Remove if breaking things
-    [SerializeField] private Volume volumeController;
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (volumeController != null)
-        {
-            volumeController.HandleAudio();
-        }
-    }
-    /////////////////////////////////////////////////////////////////////////////////////////////
     public List<GameObject> bubbles; //loads the
     // Start is called before the first frame update
     void Awake()
