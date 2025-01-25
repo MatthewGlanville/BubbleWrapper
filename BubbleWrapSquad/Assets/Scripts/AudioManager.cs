@@ -1,7 +1,7 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Advertisements.Advertisement;
+//using static UnityEngine.Advertisements.Advertisement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -64,4 +64,4 @@ public class AudioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.4f);
     }
-}*/
+}
