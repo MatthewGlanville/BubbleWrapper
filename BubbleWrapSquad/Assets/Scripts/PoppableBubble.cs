@@ -27,7 +27,6 @@ public class PoppableBubble : MonoBehaviour
     }
     public void OnHover()
     {
-        Debug.Log("waaa");
         if (!Popped)
         {
             gameManager.hover(bubblepops);

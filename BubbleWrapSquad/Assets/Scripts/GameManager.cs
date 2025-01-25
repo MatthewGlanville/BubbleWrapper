@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Texture2D cursorTex;
     private Vector2 cursorHotSpot;
-    [SerializeField] private Sprite regular;
-    [SerializeField] private Sprite popped;
-    [SerializeField] private Sprite hovered;
+    [SerializeField] private Sprite unpoppedBubble;
+    [SerializeField] private Sprite poppedBubble;
+    [SerializeField] private Sprite hoveredBubble;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -21,16 +22,16 @@ public class GameManager : MonoBehaviour
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
     };
 
-    public List<GameObject> objects; 
+    public List<GameObject> bubbles; //loads the
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         cursorHotSpot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
         Cursor.SetCursor(cursorTex,cursorHotSpot, CursorMode.Auto);
-        for (int i = 0; i < objects.Count; i++)
+        for (int i = 0; i < bubbles.Count; i++)
         {
-            bubbleMap[i/16,i%16] = objects[i];
-            PoppableBubble bubble = objects[i].GetComponent<PoppableBubble>();
+            bubbleMap[i/16,i%16] = bubbles[i];
+            PoppableBubble bubble = bubbles[i].GetComponent<PoppableBubble>();
             if (bubble != null)
             {
                 bubble.bubblePos = i;
@@ -46,11 +47,18 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript= bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = popped;
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = poppedBubble;
                 bubbleScript.Popped = true;
             }
         }
-
+        if (checkIfSolved())
+        {
+            SceneManager.LoadScene("WinScene");//REPLACE THIS WITH WHATEVER MENU SCENE YOU MAKE.
+        }
+    }
+    public void Reset()
+    {
+        SceneManager.LoadScene("MainGame");
     }
     public void hover(List<int> bubblepops)
     {
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hovered;
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hoveredBubble;
             }
         }
 
@@ -76,16 +84,16 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = regular;
+                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = unpoppedBubble;
             }
         }
 
     }
     bool checkIfSolved()
     {
-        for (int i=0; i<objects.Count; i++)
+        for (int i=0; i<bubbles.Count; i++)
         {
-            PoppableBubble bubbleScript = objects[i].GetComponent<PoppableBubble>();
+            PoppableBubble bubbleScript = bubbles[i].GetComponent<PoppableBubble>();
             if (( bubbleScript != null ) && (!bubbleScript.Popped)){
                 return false;
             }
