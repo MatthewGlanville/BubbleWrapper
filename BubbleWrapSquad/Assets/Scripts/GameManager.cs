@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private int mapLength;
     [SerializeField] private int mapHeight;
-    private int score;
+    //private int score;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        score = mapHeight * mapLength;
+       //score = mapHeight * mapLength;
         for (int x=0; x < mapHeight; x++)
         {
             List<GameObject> emptyList = new List<GameObject>();
@@ -63,8 +63,8 @@ public class GameManager : MonoBehaviour
     {
         int randNum = Random.Range(0,bubbleSounds.Count);
         audio.PlayOneShot(bubbleSounds[randNum]);
-        score -= bubblepops.Count;
-        scoreText.text = "Score: " + score; 
+        //score -= bubblepops.Count;
+        //scoreText.text = "Score: " + score; 
         foreach (int bubble in bubblepops)
         {
             int bubbleLength = bubble % mapLength;
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         }
         if (checkIfSolved())
         {
-            SceneManager.LoadScene("WinScene");//REPLACE THIS WITH WHATEVER MENU SCENE YOU MAKE.
+            SceneManager.LoadScene("MainMenu");//REPLACE THIS WITH WHATEVER MENU SCENE YOU MAKE.
         }
     }
     public void Reset()
