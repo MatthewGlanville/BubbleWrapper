@@ -7,7 +7,12 @@ public class PoppableBubble : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private List<int> bubblepops;
     public int bubblePos;
-    private bool popped = false; 
+    private bool popped = false;
+    private bool poppable;
+    public bool Poppable
+    {
+        get { return poppable; }
+    }
     public bool Popped
     {
         get { return popped; }
@@ -17,6 +22,14 @@ public class PoppableBubble : MonoBehaviour
     void Start()
     {
         bubblepops[0] = bubblePos;
+        if (bubblepops.Count > 1)
+        {
+            poppable = true;
+        }
+        else
+        {
+            poppable = false;
+        }
     }
     public void OnClick()
     {

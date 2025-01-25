@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite unpoppedBubble;
     [SerializeField] private Sprite poppedBubble;
     [SerializeField] private Sprite hoveredBubble;
+    [SerializeField] private Sprite unpoppedNonBubble;
+    [SerializeField] private Sprite poppedNonBubble;
+    [SerializeField] private Sprite hoveredNonBubble;
     [SerializeField] private int mapLength;
     [SerializeField] private int mapHeight;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
@@ -63,7 +66,14 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript= bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedBubble;
+                if (bubbleScript.Poppable)
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedBubble;
+                }
+                else
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedNonBubble;
+                }
                 bubbleScript.Popped = true;
             }
         }
@@ -87,7 +97,14 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript = bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMapDyn[bubbleHeight][ bubbleLength].GetComponent<Image>().sprite = hoveredBubble;
+                if (bubbleScript.Poppable)
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = hoveredBubble;
+                }
+                else
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = hoveredNonBubble;
+                }
             }
         }
 
@@ -101,7 +118,14 @@ public class GameManager : MonoBehaviour
             PoppableBubble bubbleScript = bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = unpoppedBubble;
+                if (bubbleScript.Poppable)
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = unpoppedBubble;
+                }
+                else
+                {
+                    bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = unpoppedNonBubble;
+                }
             }
         }
 
