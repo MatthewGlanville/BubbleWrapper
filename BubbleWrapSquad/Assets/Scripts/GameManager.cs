@@ -7,10 +7,6 @@ using UnityEngine.SceneManagement;
 using TMPro; 
 public class GameManager : MonoBehaviour
 {
-    //pop Sound Effect by <a href="https://pixabay.com/users/u_iozlfd2w96-48029382/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=283674">u_iozlfd2w96</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=283674">Pixabay</a>
-    //menu music by Music by <a href="https://pixabay.com/users/geoffharvey-9096471/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=150622">Geoff Harvey</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=150622">Pixabay</a>
-    //pop Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=43207">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=43207">Pixabay</a>
-    //game music by Music by <a href="https://pixabay.com/users/goldensoundlabs-31886162/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=286273">Golden Sound Labs</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=286273">Pixabay</a>
     [SerializeField] Texture2D cursorTex;
     private Vector2 cursorHotSpot;
     [SerializeField] private Sprite unpoppedBubble;
