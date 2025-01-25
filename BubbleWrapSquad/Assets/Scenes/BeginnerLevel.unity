@@ -3270,7 +3270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718d81e413f842a44b7c2d7b50bf4699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTex: {fileID: 2800000, guid: 813427ffdd8ce2945a3ec18244cc5cd1, type: 3}
+  cursorTex: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   unpoppedBubble: {fileID: 21300000, guid: 2bdbc14fdd1a04c4f9fa3bf524361891, type: 3}
   poppedBubble: {fileID: 21300000, guid: 89331c7d28f88454280958d5157c730d, type: 3}
   hoveredBubble: {fileID: 21300000, guid: 47e5fdc23b4b23d45a1829d1466eea91, type: 3}
@@ -3285,7 +3285,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 486b42d668802dd4c83a6c20aa2ee22a, type: 3}
   - {fileID: 8300000, guid: 5c41e1ab1e19698429fb54e391b8f58b, type: 3}
   - {fileID: 8300000, guid: 5db2de520dd4bf0459e16e34f6ebd8b2, type: 3}
-  - {fileID: 8300000, guid: e61509dba9cdef540b2814b257b2ec69, type: 3}
   bubbles:
   - {fileID: 1244739035}
   - {fileID: 408168275}
