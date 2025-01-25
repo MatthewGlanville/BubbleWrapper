@@ -1,16 +1,17 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwitcher : MonoBehaviour
+public class Switcher : MonoBehaviour
 {
-    public static SceneSwitcher Instance { get; private set; }
+    public static Switcher Instance { get; private set; }
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
-        {;
+        {
+            ;
             return;
         }
         Instance = this;
@@ -27,7 +28,7 @@ public class SceneSwitcher : MonoBehaviour
     {
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex -1);
+        SceneManager.LoadScene(currentSceneIndex - 1);
     }
 
     public void LoadSceneByName(string name)
@@ -42,4 +43,3 @@ public class SceneSwitcher : MonoBehaviour
 
 
 }
-*/

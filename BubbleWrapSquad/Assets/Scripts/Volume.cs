@@ -1,11 +1,11 @@
-/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VolumeController : MonoBehaviour
+public class Volume : MonoBehaviour
 {
     [SerializeField]
     private AudioMixer mixer;
@@ -51,11 +51,11 @@ public class VolumeController : MonoBehaviour
     {
         float volume = bgSlider.value;
         mixer.SetFloat("bgVolume", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat("bgVolume",volume);
+        PlayerPrefs.SetFloat("bgVolume", volume);
     }
 
     public void SaveSettings()
     {
         PlayerPrefs.Save();
     }
-}*/
+}
