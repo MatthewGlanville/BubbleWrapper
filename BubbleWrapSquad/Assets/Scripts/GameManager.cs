@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite unpoppedBubble;
     [SerializeField] private Sprite poppedBubble;
     [SerializeField] private Sprite hoveredBubble;
+    [SerializeField] private int mapLength;
+    [SerializeField] private int mapHeight;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -21,16 +23,28 @@ public class GameManager : MonoBehaviour
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
     };
+    public List<List<GameObject>> bubbleMapDyn= new List<List<GameObject>>(); //not necessary just wanted to see if i could make it flexible cause i had nothing better to do
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private List<AudioClip> bubbleSounds;
 
     public List<GameObject> bubbles; //loads the
     // Start is called before the first frame update
     void Awake()
     {
+        for (int x=0; x < mapHeight; x++)
+        {
+            List<GameObject> emptyList = new List<GameObject>();
+            for (int y=0; y<mapLength; y++)
+            {
+                emptyList.Add(null);
+            }
+            bubbleMapDyn.Add(emptyList);
+        }
         cursorHotSpot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
         Cursor.SetCursor(cursorTex,cursorHotSpot, CursorMode.Auto);
         for (int i = 0; i < bubbles.Count; i++)
         {
-            bubbleMap[i/16,i%16] = bubbles[i];
+            bubbleMapDyn[i/mapLength][i%mapLength] = bubbles[i];
             PoppableBubble bubble = bubbles[i].GetComponent<PoppableBubble>();
             if (bubble != null)
             {
@@ -40,14 +54,16 @@ public class GameManager : MonoBehaviour
     }
     public void popBubbles(List<int> bubblepops)
     {
+        int randNum = Random.Range(0,bubbleSounds.Count);
+        audio.PlayOneShot(bubbleSounds[randNum]);
         foreach (int bubble in bubblepops)
         {
-            int bubbleLength = bubble % 16;
-            int bubbleHeight = bubble / 16;
-            PoppableBubble bubbleScript= bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            int bubbleLength = bubble % mapLength;
+            int bubbleHeight = bubble / mapLength;
+            PoppableBubble bubbleScript= bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = poppedBubble;
+                bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = poppedBubble;
                 bubbleScript.Popped = true;
             }
         }
@@ -58,19 +74,20 @@ public class GameManager : MonoBehaviour
     }
     public void Reset()
     {
-        SceneManager.LoadScene("MainGame");
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
     public void hover(List<int> bubblepops)
     {
         foreach (int bubble in bubblepops)
         {
 
-            int bubbleLength = bubble % 16;
-            int bubbleHeight = bubble / 16;
-            PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            int bubbleLength = bubble % mapLength;
+            int bubbleHeight = bubble / mapLength;
+            PoppableBubble bubbleScript = bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hoveredBubble;
+                bubbleMapDyn[bubbleHeight][ bubbleLength].GetComponent<Image>().sprite = hoveredBubble;
             }
         }
 
@@ -79,12 +96,12 @@ public class GameManager : MonoBehaviour
     {
         foreach (int bubble in bubblepops)
         {
-            int bubbleLength = bubble % 16;
-            int bubbleHeight = bubble / 16;
-            PoppableBubble bubbleScript = bubbleMap[bubbleHeight, bubbleLength].GetComponent<PoppableBubble>();
+            int bubbleLength = bubble % mapLength;
+            int bubbleHeight = bubble / mapLength;
+            PoppableBubble bubbleScript = bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<PoppableBubble>();
             if ((bubbleScript != null) && (!bubbleScript.Popped))
             {
-                bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = unpoppedBubble;
+                bubbleMapDyn[bubbleHeight][bubbleLength].GetComponent<Image>().sprite = unpoppedBubble;
             }
         }
 
