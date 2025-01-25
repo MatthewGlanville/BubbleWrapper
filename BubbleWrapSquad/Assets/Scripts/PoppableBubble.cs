@@ -25,6 +25,21 @@ public class PoppableBubble : MonoBehaviour
             gameManager.popBubbles(bubblepops);
         }
     }
+    public void OnHover()
+    {
+        Debug.Log("waaa");
+        if (!Popped)
+        {
+            gameManager.hover(bubblepops);
+        }
+    }
+    public void OnExitHover()
+    {
+        if (!Popped)
+        {
+            gameManager.exitHover(bubblepops);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

@@ -5,7 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Sprite popped; 
+    [SerializeField] Texture2D cursorTex;
+    private Vector2 cursorHotSpot;
+    [SerializeField] private Sprite regular;
+    [SerializeField] private Sprite popped;
+    [SerializeField] private Sprite hovered;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -21,6 +25,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cursorHotSpot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
+        Cursor.SetCursor(cursorTex,cursorHotSpot, CursorMode.Auto);
         for (int i = 0; i < objects.Count; i++)
         {
             bubbleMap[i/16,i%16] = objects[i];
@@ -43,6 +49,26 @@ public class GameManager : MonoBehaviour
                 bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = popped;
                 bubbleScript.Popped = true;
             }
+        }
+
+    }
+    public void hover(List<int> bubblepops)
+    {
+        foreach (int bubble in bubblepops)
+        {
+            int bubbleLength = bubble % 16;
+            int bubbleHeight = bubble / 16;
+            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = hovered;
+        }
+
+    }
+    public void exitHover(List<int> bubblepops)
+    {
+        foreach (int bubble in bubblepops)
+        {
+            int bubbleLength = bubble % 16;
+            int bubbleHeight = bubble / 16;
+            bubbleMap[bubbleHeight, bubbleLength].GetComponent<Image>().sprite = regular;
         }
 
     }
