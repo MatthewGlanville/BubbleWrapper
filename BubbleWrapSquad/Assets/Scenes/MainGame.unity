@@ -1222,8 +1222,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeController, Assembly-CSharp
+      - m_Target: {fileID: 1206343851}
+        m_TargetAssemblyTypeName: Volume, Assembly-CSharp
         m_MethodName: SetFXVolume
         m_Mode: 1
         m_Arguments:
@@ -1316,21 +1316,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1206343849}
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
         m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 27a5e28b9ed954f408d9c63f7cb22c0a, type: 2}
-        m_TargetAssemblyTypeName: VibrationManager, Assembly-CSharp
-        m_MethodName: Heavy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1389,6 +1377,7 @@ GameObject:
   - component: {fileID: 60125738}
   - component: {fileID: 60125737}
   - component: {fileID: 60125739}
+  - component: {fileID: 60125740}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1423,6 +1412,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5c41e1ab1e19698429fb54e391b8f58b, type: 3}
   - {fileID: 8300000, guid: 486b42d668802dd4c83a6c20aa2ee22a, type: 3}
   - {fileID: 8300000, guid: 5db2de520dd4bf0459e16e34f6ebd8b2, type: 3}
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+  - {fileID: 8300000, guid: e61509dba9cdef540b2814b257b2ec69, type: 3}
+=======
+  volumeController: {fileID: 1206343851}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   bubbles:
   - {fileID: 738070767}
   - {fileID: 1292766015}
@@ -1576,12 +1573,108 @@ AudioSource:
   m_GameObject: {fileID: 60125736}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5418572640380614, guid: 94638f9ecdb8d634c8490b1e61ebe3c3, type: 2}
   m_audioClip: {fileID: 8300000, guid: 49a394c8804cb4d43bea425701cf4a24, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &60125740
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60125736}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6087530960599453355, guid: 94638f9ecdb8d634c8490b1e61ebe3c3, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5c41e1ab1e19698429fb54e391b8f58b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4292,21 +4385,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1206343849}
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
         m_MethodName: VolumeActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 27a5e28b9ed954f408d9c63f7cb22c0a, type: 2}
-        m_TargetAssemblyTypeName: VibrationManager, Assembly-CSharp
-        m_MethodName: Heavy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6061,21 +6142,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1206343849}
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
         m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 27a5e28b9ed954f408d9c63f7cb22c0a, type: 2}
-        m_TargetAssemblyTypeName: VibrationManager, Assembly-CSharp
-        m_MethodName: Heavy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8248,8 +8317,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeController, Assembly-CSharp
+      - m_Target: {fileID: 1206343851}
+        m_TargetAssemblyTypeName: Volume, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 1
         m_Arguments:
@@ -12207,7 +12276,7 @@ RectTransform:
   m_GameObject: {fileID: 1095051596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 629912984}
@@ -12237,7 +12306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 417c457cafe873f43bae8e575863ff68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0d987862f58b1d40a976e0c5c53a756, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12282,7 +12351,7 @@ RectTransform:
   m_GameObject: {fileID: 1096012270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1104492011}
@@ -12312,7 +12381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47e5fdc23b4b23d45a1829d1466eea91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bad9aa9c08316e449fa642f7737f3ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12990,6 +13059,9 @@ GameObject:
   - component: {fileID: 1206343847}
   - component: {fileID: 1206343846}
   - component: {fileID: 1206343845}
+  - component: {fileID: 1206343851}
+  - component: {fileID: 1206343849}
+  - component: {fileID: 1206343850}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13047,7 +13119,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -13082,6 +13154,49 @@ RectTransform:
   m_AnchoredPosition: {x: 960.8474, y: 539.8264}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1206343849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206343844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83e0ed24081f3845b7253e8cddf0295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1911552911}
+  volumeMenu: {fileID: 954161901}
+  SceneSwitcher: {fileID: 1206343850}
+  volumeController: {fileID: 1206343851}
+--- !u!114 &1206343850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206343844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00e595935cfbba4cbfe2cc8a606eef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1206343851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206343844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ca937e9eeaf2e44926b70cbd7a73dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 94638f9ecdb8d634c8490b1e61ebe3c3, type: 2}
+  bgSlider: {fileID: 677540307}
+  fxSlider: {fileID: 47209174}
 --- !u!1 &1238628290
 GameObject:
   m_ObjectHideFlags: 0
@@ -15750,21 +15865,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1206343849}
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
         m_MethodName: Home
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 27a5e28b9ed954f408d9c63f7cb22c0a, type: 2}
-        m_TargetAssemblyTypeName: VibrationManager, Assembly-CSharp
-        m_MethodName: Heavy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19415,7 +19518,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1911552912}
-  - component: {fileID: 1911552913}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -19445,22 +19547,6 @@ RectTransform:
   m_AnchoredPosition: {x: -960, y: -540}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1911552913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911552911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f92f52893468efa4381d8aafc9a2c045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pop: {fileID: 0}
-  scramble: {fileID: 0}
-  rock: {fileID: 0}
-  bg: {fileID: 0}
 --- !u!1 &1913826076
 GameObject:
   m_ObjectHideFlags: 0
@@ -20556,7 +20642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -951.89954, y: -1075.5701}
+  m_AnchoredPosition: {x: -951.9911, y: -1075.5701}
   m_SizeDelta: {x: 67, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036355574
@@ -20603,9 +20689,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60125737}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Reset
+      - m_Target: {fileID: 1206343849}
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21549,20 +21635,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pausing, Assembly-CSharp
         m_MethodName: VolumeInactive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 27a5e28b9ed954f408d9c63f7cb22c0a, type: 2}
-        m_TargetAssemblyTypeName: VibrationManager, Assembly-CSharp
-        m_MethodName: Heavy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
