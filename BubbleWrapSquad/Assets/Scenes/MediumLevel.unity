@@ -8143,6 +8143,7 @@ MonoBehaviour:
   scoreText: {fileID: 202315219}
   mapLength: 8
   mapHeight: 6
+  level: 2
   audio: {fileID: 1678507457}
   bubbleSounds:
   - {fileID: 165324180}

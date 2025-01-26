@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private int mapLength;
     [SerializeField] private int mapHeight;
+    [SerializeField] private int level;
     private int score;
     public GameObject [,] bubbleMap = { //a map full of all the bubbles in the scene, you cam 
         {null, null,null,null,null, null,null,null,null, null,null,null,null, null,null,null},
@@ -106,6 +107,18 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Bubbles: " + score;
         if (checkIfSolved())
         {
+            if (level == 1)
+            {
+                PlayerPrefs.SetInt("level1", 1);
+            }
+            if (level == 2)
+            {
+                PlayerPrefs.SetInt("level2", 1);
+            }
+            if (level == 3)
+            {
+                PlayerPrefs.SetInt("level3", 1);
+            }
             SceneManager.LoadScene("MainMenu");//REPLACE THIS WITH WHATEVER MENU SCENE YOU MAKE.
         }
     }
