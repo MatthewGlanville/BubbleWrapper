@@ -56,4 +56,9 @@ public class MainMenu : MonoBehaviour
         audio.PlayOneShot(menuClick);
         SceneManager.LoadScene("MainGame");
     }
+    public void Trophy()
+    {
+        audio.PlayOneShot(menuClick);
+        SceneManager.LoadScene("TrophyRoom");
+    }
 }
