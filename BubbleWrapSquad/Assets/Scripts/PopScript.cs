@@ -21,6 +21,10 @@ public class PopScript : MonoBehaviour
         manager.getPopped(bubble);
         Destroy(this.gameObject);
     }
+    public void autoPop()
+    {
+        Destroy(this.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
