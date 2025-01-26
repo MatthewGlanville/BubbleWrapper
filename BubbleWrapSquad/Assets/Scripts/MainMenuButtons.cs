@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mediumButton;
     public GameObject largeButton;
     [SerializeField] private AudioSource audio;
-    [SerializeField] private AudioClip menuClick;
+    [SerializeField] private AudioSource menuClick;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,39 +26,39 @@ public class MainMenu : MonoBehaviour
 
     public void playbutton()
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         easyButton.SetActive(true);
         mediumButton.SetActive(true);
         largeButton.SetActive(true);
     }
     public void optionbutton()
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
     }
     public void exitbutton()
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         Application.Quit();
     }
 
     public void easy()
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         SceneManager.LoadScene("BeginnerLevel");
     }
     public void medium() 
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         SceneManager.LoadScene("MediumLevel");
     }
     public void large() 
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         SceneManager.LoadScene("MainGame");
     }
     public void Trophy()
     {
-        audio.PlayOneShot(menuClick);
+        menuClick.Play();
         SceneManager.LoadScene("TrophyRoom");
     }
 }

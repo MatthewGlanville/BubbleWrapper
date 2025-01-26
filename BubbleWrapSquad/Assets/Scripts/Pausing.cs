@@ -13,30 +13,36 @@ public class Pausing : MonoBehaviour
     Switcher SceneSwitcher;
     [SerializeField]
     Volume volumeController;
+    [SerializeField] AudioSource menuClick;
     public void Pause()
     {
+        menuClick.Play();
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void Home()
     {
+        menuClick.Play();
         SceneSwitcher.LoadSceneByName("MainMenu");
         Time.timeScale = 1f;
     }
     public void Resume()
     {
+        menuClick.Play();
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
     public void Restart()
     {
+        menuClick.Play();
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1f;
     }
     public void VolumeActive()
     {
+        menuClick.Play();
         Time.timeScale = 0f;;
         volumeMenu.SetActive(true);
         volumeController.HandleAudio();
@@ -44,6 +50,7 @@ public class Pausing : MonoBehaviour
 
     public void VolumeInactive()
     {
+        menuClick.Play();
         Time.timeScale = 0f;
         volumeController.SaveSettings();
         volumeMenu.SetActive(false);

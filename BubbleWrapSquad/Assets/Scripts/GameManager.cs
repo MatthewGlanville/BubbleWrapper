@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     };
     public List<List<GameObject>> bubbleMapDyn= new List<List<GameObject>>(); //not necessary just wanted to see if i could make it flexible cause i had nothing better to do
     [SerializeField] private AudioSource audio;
-    [SerializeField] private List<AudioClip> bubbleSounds;
+    [SerializeField] private List<AudioSource> bubbleSounds;
     GameObject popClone;
     public List<GameObject> bubbles; //loads the
     // Start is called before the first frame update
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     public void popBubbles(List<int> bubblepops)
     {
         int randNum = Random.Range(0,bubbleSounds.Count);
-        audio.PlayOneShot(bubbleSounds[randNum]);
+        bubbleSounds[randNum].Play();
         foreach (int bubble in bubblepops)
         {
             int bubbleLength = bubble % mapLength;
